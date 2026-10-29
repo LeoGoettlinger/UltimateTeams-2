@@ -39,8 +39,8 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:1.18.42")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
 
-    // Compile against the newest published 26.x API; Paper keeps API compatibility for 26.3.
-    compileOnly("io.papermc.paper:paper-api:26.2-R0.1-SNAPSHOT")
+    // Paper 26.x uses build-numbered API artifacts instead of the old R0.1-SNAPSHOT scheme.
+    compileOnly("io.papermc.paper:paper-api:26.3.build.+")
     compileOnly("me.clip:placeholderapi:2.11.7")
     compileOnly("org.geysermc.floodgate:api:2.2.5-SNAPSHOT")
     implementation("org.bstats:bstats-bukkit:3.1.0")
