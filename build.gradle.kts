@@ -39,8 +39,8 @@ dependencies {
     testCompileOnly("org.projectlombok:lombok:1.18.42")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.42")
 
-    // Folia and Spigot
-    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
+    // Paper/Folia (Minecraft 26.3)
+    compileOnly("io.papermc.paper:paper-api:26.3-R0.1-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.11.7")
     compileOnly("org.geysermc.floodgate:api:2.2.5-SNAPSHOT")
     implementation("org.bstats:bstats-bukkit:3.1.0")
@@ -112,7 +112,8 @@ tasks.withType<Javadoc>().configureEach {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(21))
+        // Minecraft 26.x and its Paper API require Java 25.
+        languageVersion.set(JavaLanguageVersion.of(25))
     }
 
     withJavadocJar()
